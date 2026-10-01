@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "taskrelay-python"
+version = "0.1.0"
+description = "A persistent Python job queue with SQLite transactions, expiring worker leases, retry backoff, and dead-letter states. Multiple worker processes can coordinate through one local database."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+taskrelay = "taskrelay:main"
+
+[tool.setuptools]
+py-modules = ["taskrelay"]
